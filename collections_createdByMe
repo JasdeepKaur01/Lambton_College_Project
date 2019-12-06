@@ -1,0 +1,42 @@
+> db.employee.find()
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7cf"), "eid" : "1", "ename" : "jashan", "ebranch" : "CSE", "jobtype" : "part-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d0"), "eid" : "2", "ename" : "jasdeep", "ebranch" : "ECE", "jobtype" : "full-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d1"), "eid" : "3", "ename" : "ajimol", "ebranch" : "EEE", "jobtype" : "part-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d2"), "eid" : "4", "ename" : "manpreet", "ebranch" : "ECE", "jobtype" : "full-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d3"), "eid" : "5", "ename" : "kuljeet", "ebranch" : "IT", "jobtype" : "part-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d4"), "eid" : "6", "ename" : "simran", "ebranch" : "MECH", "jobtype" : "full-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d5"), "eid" : "7", "ename" : "param", "ebranch" : "CSE", "jobtype" : "full-time" }
+{ "_id" : ObjectId("5dcfea4fe713271a7802d7d6"), "eid" : "8", "ename" : "gaurav", "ebranch" : "EEE", "jobtype" : "part-time" }
+> db.newproducts.find()
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7af"), "pid" : "1", "pname" : "car", "category" : "vehicle", "qty" : "15" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b0"), "pid" : "2", "pname" : "soap", "category" : "beauty", "qty" : "19" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b1"), "pid" : "3", "pname" : "cola", "category" : "drink", "qty" : "13" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b2"), "pid" : "4", "pname" : "roti", "category" : "food", "qty" : "59" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b3"), "pid" : "5", "pname" : "shoes", "category" : "personal", "qty" : "40" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b4"), "pid" : "6", "pname" : "bag", "category" : "daystuffs", "qty" : "57" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b5"), "pid" : "7", "pname" : "phone", "category" : "acceserories", "qty" : "52" }
+{ "_id" : ObjectId("5dcfe9e0e713271a7802d7b6"), "pid" : "8", "pname" : "laptop", "category" : "acceserories", "qty" : "51" }
+> db.student.find()
+{ "_id" : ObjectId("5dcfea29e713271a7802d7bf"), "sid" : "1", "sname" : "Jasdeep", "course" : "ComputerScience", "gpa" : "5" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c0"), "sid" : "2", "sname" : "Ajimol", "course" : "SoftwareDevelopment", "gpa" : "6" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c1"), "sid" : "3", "sname" : "Kanwar", "course" : "SupplychainManagement", "gpa" : "4" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c2"), "sid" : "4", "sname" : "Jashan", "course" : "Generalism", "gpa" : "7" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c3"), "sid" : "5", "sname" : "Manpreet", "course" : "Business Management", "gpa" : "6" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c4"), "sid" : "6", "sname" : "Salina", "course" : "Child Care", "gpa" : "3" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c5"), "sid" : "7", "sname" : "Davina", "course" : "Adult Educationn", "gpa" : "2" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c6"), "sid" : "8", "sname" : "Kabir", "course" : "Nursing", "gpa" : "8" }
+> db.driver.find()
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8e4"), "driverid" : "1", "firstname" : "param", "lastname" : "singh", "shifttime" : "morning" }
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8e5"), "driverid" : "2", "firstname" : "gaurav", "lastname" : "juneja", "shifttime" : "afternoon" }
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8e6"), "driverid" : "3", "firstname" : "sahil", "lastname" : "rana", "shifttime" : "evening" }
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8e7"), "driverid" : "4", "firstname" : "hinda", "lastname" : "singa", "shifttime" : "morning" }
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8e8"), "driverid" : "5", "firstname" : "amrit", "lastname" : "maan", "shifttime" : "evening" }
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8e9"), "driverid" : "6", "firstname" : "deep", "lastname" : "gill", "shifttime" : "afternoon" }
+{ "_id" : ObjectId("5dea8e08039a80101a6ab8ea"), "driverid" : "7", "firstname" : "kanwal", "lastname" : "grewal", "shifttime" : "morning" }
+> db.campus.find()
+{ "_id" : ObjectId("5dea8e1d039a80101a6ab8eb"), "campusid" : "1", "campusname" : "cestarcollege1", "campuslocation" : "toronto" }
+{ "_id" : ObjectId("5dea8e1d039a80101a6ab8ec"), "campusid" : "2", "campusname" : "cestarcollege2", "campuslocation" : "sarnia" }
+{ "_id" : ObjectId("5dea8e1d039a80101a6ab8ed"), "campusid" : "3", "campusname" : "cestarcollege3", "campuslocation" : "missisauga" }
+{ "_id" : ObjectId("5dea8e1d039a80101a6ab8ee"), "campusid" : "4", "campusname" : "cestarcollege4", "campuslocation" : "guelph" }
+{ "_id" : ObjectId("5dea8e1d039a80101a6ab8ef"), "campusid" : "5", "campusname" : "cestarcollege5", "campuslocation" : "barrie" }
+{ "_id" : ObjectId("5dea8e1d039a80101a6ab8f0"), "campusid" : "6", "campusname" : "cestarcollege6", "campuslocation" : "sudbury" }>
