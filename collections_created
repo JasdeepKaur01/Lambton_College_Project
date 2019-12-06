@@ -1,0 +1,8 @@
+{ "_id" : ObjectId("5dcfea29e713271a7802d7bf"), "sid" : "1", "sname" : "Jasdeep", "course" : "ComputerScience", "gpa" : "5" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c0"), "sid" : "2", "sname" : "Ajimol", "course" : "SoftwareDevelopment", "gpa" : "6" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c1"), "sid" : "3", "sname" : "Kanwar", "course" : "SupplychainManagement", "gpa" : "4" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c2"), "sid" : "4", "sname" : "Jashan", "course" : "Generalism", "gpa" : "7" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c3"), "sid" : "5", "sname" : "Manpreet", "course" : "Business Management", "gpa" : "6" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c4"), "sid" : "6", "sname" : "Salina", "course" : "Child Care", "gpa" : "3" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c5"), "sid" : "7", "sname" : "Davina", "course" : "Adult Educationn", "gpa" : "2" }
+{ "_id" : ObjectId("5dcfea29e713271a7802d7c6"), "sid" : "8", "sname" : "Kabir", "course" : "Nursing", "gpa" : "8" 
