@@ -1,0 +1,142 @@
+const express= require('express');
+const app = express();
+var mongo= require('mongodb');
+app.use(express.json());
+
+//connect to database and show list of collections.
+app.get('/api/student1',(req,res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("salesmongo");
+ 
+  dbo.listCollections().toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.send(result);
+db.close();
+ });
+});
+});
+
+
+//get services to read data from collections.
+app.get('/api/student1/jass',(req,res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+MongoClient.connect(url, function(err, db) {
+if (err) throw err;
+var dbo = db.db("salesmongo");
+dbo.collection("employee").find({}).toArray(function(err, result) {
+if (err) throw err;
+console.log(result);
+res.send(result);
+
+db.close();
+ });
+});
+});
+app.get('/api/jass', (req, res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("salesmongo");
+  var query = { ename: "jashan" };
+  dbo.collection("employee").find(query).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    db.close();
+  });
+});
+});
+
+app.get('/api/jass1', (req,res)=> {
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+ if (err) throw err;
+ var dbo = db.db("salesmongo");
+ dbo.collection("employee").find({}, { projection: { _id: 0, ename: 1, address: 1 } }).toArray(function(err, result) {
+if (err) throw err;
+console.log(result);
+res.send(result);
+db.close();
+ });
+});
+});
+
+
+//put services to update collections.
+app.put('/api/jassi', (req, res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("salesmongo");
+  var myquery = { ebranch: "MECH" };
+  var newvalues = { $set: {ename: "Hardeep", jobtype: "part-time" } };
+  dbo.collection("employee").updateOne(myquery, newvalues, function(err, res) {
+    if (err) throw err;
+    console.log(res.result.nModified +" document updated");
+    db.close();
+  });
+});
+});
+app.put('/api/jassi1', (req, res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("salesmongo");
+  var myquery = { category:"food" };
+  var newvalues = { $set: {qty:10} };
+  dbo.collection("newproducts").updateOne(myquery, newvalues, function(err, res) {
+    if (err) throw err;
+    console.log(res.result.nModified +"document updated");
+    db.close();
+  });
+});
+});
+
+//post services to insert data into collections.
+app.post('/api/sweety', (req, res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("salesmongo");
+  var myobj = { eid:"09",ename: "RAJDEEP", ebranch:"CSAT", jobtype: "full-time" ,};
+  dbo.collection("employee").insertOne(myobj, function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+    db.close();
+  });
+});
+});
+
+//delete service to delete data into collections.
+app.delete('/api/sweety1', (req, res)=>{
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+    var dbo = db.db("salesmongo");
+  var myquery = { ename: 'RAJDEEP' };
+  dbo.collection("employee").deleteMany(myquery, function(err, obj) {
+    if (err) throw err;
+    console.log("documents deleted");
+    db.close();
+  });
+});
+});
+
+const port= process.env.PORT||8081;
+app.listen(port,()=>console.log('listening to port ${port}...'));
